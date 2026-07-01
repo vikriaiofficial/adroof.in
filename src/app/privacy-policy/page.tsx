@@ -99,7 +99,6 @@ export default function PrivacyPolicy() {
                 We use the collected information for the following business purposes:
               </p>
               <ul style={ulStyle}>
-                <li>To initialize, schedule, run, and display tracking updates for both physical (hoardings, boards, flyers, voice vans) and online campaigns.</li>
                 <li>To process invoices and secure payments.</li>
                 <li>To provide responsive customer support and resolve campaign queries.</li>
                 <li>To monitor, analyze, and optimize application efficiency, performance, and features.</li>
@@ -110,7 +109,6 @@ export default function PrivacyPolicy() {
                 We do not sell your personal data. We only share campaign-related data with authorized vendors under strict confidentiality obligations:
               </p>
               <ul style={ulStyle}>
-                <li><strong>Offline Service Partners:</strong> Printing houses, local boards installers, billboard space owners, and audio announcement van operators to physically place and track your offline media.</li>
                 <li><strong>Digital Network Providers:</strong> Google Ads and Meta Ads interfaces through secure authorized APIs (to launch digital campaigns on your behalf).</li>
                 <li><strong>Legal Compliance:</strong> When required by Indian law, judicial orders, or governmental requests.</li>
               </ul>
@@ -237,10 +235,10 @@ export default function PrivacyPolicy() {
               <p>You have the right to delete your data at any time through the following methods:</p>
               <ol style={olStyle}>
                 <li><strong>In-App Deletion:</strong> You can disconnect your Facebook account from within <strong>Adroof Settings &gt; Connected Accounts</strong>. This will immediately revoke our access tokens.</li>
-                <li><strong>Email Request:</strong> You can email us at <a href="mailto:support@adroof.in" style={linkStyle}>support@adroof.in</a> with the subject line &quot;Data Deletion Request&quot;. We will permanently delete all your data, including all Meta data and access tokens, from our servers within 7 business days.</li>
+                <li><strong>Email Request:</strong> You can email us at <a href="mailto:info@adroof.in" style={linkStyle}>info@adroof.in</a> with the subject line &quot;Data Deletion Request&quot;. We will permanently delete all your data, including all Meta data and access tokens, from our servers within 7 business days.</li>
                 <li><strong>Facebook Data Deletion Callback:</strong> You can also request data deletion directly via Facebook. Instructions are available at:{' '}
-                  <a href="https://www.adroof.online/data-deletion" target="_blank" rel="noopener noreferrer" style={linkStyle}>
-                    https://www.adroof.online/data-deletion
+                  <a href="https://www.adroof.online/delete-account" target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                    https://www.adroof.online/delete-account
                   </a>
                 </li>
               </ol>
@@ -271,7 +269,7 @@ export default function PrivacyPolicy() {
               </p>
               <p style={contactBoxStyle}>
                 <strong>Gore Enterprises</strong><br />
-                Email: support@adroof.in<br />
+                Email: info@adroof.in<br />
                 Address: House No 4, Kumbhar Wasti, Ravalgaon, Ravalgaon-Guravpimpri Rd, Mirajgaon, Ahmednagar, Maharashtra, India - 414401<br />
                 Phone: +91 73502 72829
               </p>
