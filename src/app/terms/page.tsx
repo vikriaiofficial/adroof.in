@@ -145,7 +145,7 @@ export default function TermsAndConditions() {
           {/* ===== SECTION 2: META TERMS OF SERVICE ===== */}
           <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={h2Style}>Terms of Service for Adroof</h2>
+              <h2 style={h2Style}>Terms of Service for Meta</h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Last Updated: July 1, 2026</p>
 
               <hr style={hrStyle} />
@@ -251,7 +251,7 @@ export default function TermsAndConditions() {
           {/* ===== SECTION 3: GOOGLE TERMS & CONDITIONS ===== */}
           <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={h2Style}>Terms &amp; Conditions for Adroof</h2>
+              <h2 style={h2Style}>Terms &amp; Conditions for Google Services</h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Last Updated: July 1, 2026</p>
 
               <hr style={hrStyle} />
