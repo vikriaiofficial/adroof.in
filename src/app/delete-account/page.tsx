@@ -1,18 +1,16 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
 
 export default function DeleteAccount() {
-  const [confirmed, setConfirmed] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = () => {
-    if (confirmed) {
-      // Open mailto link
-      window.location.href = 'mailto:info@adroof.in?subject=Account%20Deletion%20Request&body=Hi%20AdRoof%20Team%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20account%20and%20all%20associated%20data.%0A%0AMy%20registered%20details%3A%0AName%3A%20%0AEmail%2FPhone%3A%20%0A%0AThank%20you.';
-      setSubmitted(true);
-    }
+  const h3Style = { color: '#0f172a', fontSize: '1.15rem', fontWeight: '600' as const };
+  const ulStyle = { paddingLeft: '20px', listStyleType: 'disc' as const, display: 'flex', flexDirection: 'column' as const, gap: '0.5rem' };
+  const olStyle = { paddingLeft: '20px', listStyleType: 'decimal' as const, display: 'flex', flexDirection: 'column' as const, gap: '0.5rem' };
+  const contactBoxStyle = {
+    background: 'rgba(255, 106, 0, 0.04)',
+    borderLeft: '4px solid var(--brand-orange)',
+    padding: '12px 16px',
+    borderRadius: '0 8px 8px 0',
+    fontWeight: '500' as const,
+    color: '#0f172a',
   };
 
   return (
@@ -53,13 +51,13 @@ export default function DeleteAccount() {
         {/* Header Block */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '100%', marginBottom: '2.5rem' }}>
           <p className="intro-badge">ACCOUNT MANAGEMENT</p>
-          <h1 className="main-title" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>Delete Account</h1>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', textAlign: 'center', maxWidth: '500px' }}>
-            Request permanent deletion of your AdRoof account and all associated data.
+          <h1 className="main-title" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}>Delete Your Adroof Account &amp; Connected Data</h1>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', textAlign: 'center', maxWidth: '560px' }}>
+            You can request permanent deletion of your Adroof account and all associated data from Meta, Google, and our servers at any time.
           </p>
         </div>
 
-        {/* Info Card */}
+        {/* Content Card */}
         <div style={{
           width: '100%',
           textAlign: 'left',
@@ -75,172 +73,131 @@ export default function DeleteAccount() {
           gap: '1.5rem',
         }}>
 
-          {!submitted ? (
-            <>
-              <h2 style={{ color: '#0f172a', fontSize: '1.35rem', fontWeight: '700' }}>What happens when you delete your account?</h2>
+          <h2 style={{ color: '#0f172a', fontSize: '1.35rem', fontWeight: '700' }}>What Data Will Be Permanently Deleted?</h2>
+          <p>
+            When you delete your account, the following data will be permanently removed from our servers within 7 business days:
+          </p>
 
-              <p>
-                When you request account deletion, <strong>all your data and details will be permanently removed</strong> from our servers. This includes:
-              </p>
-              <ul style={{ paddingLeft: '20px', listStyleType: 'disc', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <li>Your profile information (name, email, phone number).</li>
-                <li>All campaign history, booking records, and analytics data.</li>
-                <li>Connected social accounts and advertising platform tokens.</li>
-                <li>Payment transaction history and invoices.</li>
-                <li>All saved preferences, templates, and application settings.</li>
-              </ul>
+          {/* 1. Adroof Profile */}
+          <h3 style={h3Style}>1. Your Adroof Profile Data</h3>
+          <ul style={ulStyle}>
+            <li>Name, email address, phone number, password, and company details.</li>
+            <li>All campaign history, booking records, analytics reports, and saved templates.</li>
+          </ul>
 
-              <p style={{
-                background: 'rgba(220, 38, 38, 0.04)',
-                borderLeft: '4px solid #dc2626',
-                padding: '12px 16px',
-                borderRadius: '0 8px 8px 0',
-                fontWeight: '500',
-                color: '#0f172a'
-              }}>
-                ⚠️ <strong>Warning:</strong> This action is irreversible. Once your account is deleted, your data cannot be recovered.
-              </p>
+          {/* 2. Meta Platform Data */}
+          <h3 style={h3Style}>2. Meta Platform Data (Facebook &amp; Instagram)</h3>
+          <p>
+            As required by Meta Platform Terms, we will delete all data received from Meta APIs, including:
+          </p>
+          <ul style={ulStyle}>
+            <li>Facebook Page names, Page IDs, and Page Access Tokens.</li>
+            <li>Instagram Business Account IDs and Access Tokens.</li>
+            <li>Ad Account data, campaign performance, spend, and Page/Post Insights.</li>
+            <li>All cached posts, comments, and Messenger conversations from your connected Pages.</li>
+          </ul>
 
-              <hr style={{ border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' }} />
+          {/* 3. Google Platform Data */}
+          <h3 style={h3Style}>3. Google Platform Data (Google My Business &amp; Google Ads)</h3>
+          <p>
+            As required by Google API Services User Data Policy, we will delete all data received from Google APIs, including:
+          </p>
+          <ul style={ulStyle}>
+            <li><strong>Google My Business (GMB) Data:</strong> Business Profile IDs, location data, reviews, posts, Q&amp;A, and performance insights.</li>
+            <li><strong>Google Ads Data:</strong> Customer IDs, campaign data, keywords, ad performance metrics, and billing information.</li>
+            <li>OAuth Access Tokens and Refresh Tokens for your Google Account.</li>
+          </ul>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.15rem', fontWeight: '600' }}>How to delete your account</h3>
+          {/* 4. Billing & Payment Data */}
+          <h3 style={h3Style}>4. Billing &amp; Payment Data</h3>
+          <p>
+            All invoice history and transaction records will be deleted, except where we are legally required to retain them for tax/audit purposes in India. In such cases, data is anonymized.
+          </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                {/* Step 1 */}
-                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                  <div style={{
-                    minWidth: '36px', height: '36px', borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #ff6a00, #ee5a24)',
-                    color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '0.9rem', fontWeight: '700'
-                  }}>1</div>
-                  <div>
-                    <p style={{ fontWeight: '600', color: '#0f172a' }}>Confirm your decision</p>
-                    <p style={{ fontSize: '0.9rem' }}>Check the confirmation box below to acknowledge that all your data will be permanently deleted.</p>
-                  </div>
-                </div>
+          <p style={{
+            background: 'rgba(220, 38, 38, 0.04)',
+            borderLeft: '4px solid #dc2626',
+            padding: '12px 16px',
+            borderRadius: '0 8px 8px 0',
+            fontWeight: '500',
+            color: '#0f172a'
+          }}>
+            ⚠️ <strong>Important:</strong> This action is permanent and irreversible. Once deleted, your data cannot be recovered.
+          </p>
 
-                {/* Step 2 */}
-                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                  <div style={{
-                    minWidth: '36px', height: '36px', borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #ff6a00, #ee5a24)',
-                    color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '0.9rem', fontWeight: '700'
-                  }}>2</div>
-                  <div>
-                    <p style={{ fontWeight: '600', color: '#0f172a' }}>Send deletion request</p>
-                    <p style={{ fontSize: '0.9rem' }}>Click the button below to send an email to <strong>info@adroof.in</strong> with your account deletion request.</p>
-                  </div>
-                </div>
+          <hr style={{ border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' }} />
 
-                {/* Step 3 */}
-                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                  <div style={{
-                    minWidth: '36px', height: '36px', borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #ff6a00, #ee5a24)',
-                    color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '0.9rem', fontWeight: '700'
-                  }}>3</div>
-                  <div>
-                    <p style={{ fontWeight: '600', color: '#0f172a' }}>Account deleted within 7–10 days</p>
-                    <p style={{ fontSize: '0.9rem' }}>Our team will process your request and permanently delete your account and all associated data within <strong>7 to 10 business days</strong>. You will receive a confirmation email once completed.</p>
-                  </div>
-                </div>
-              </div>
+          <h2 style={{ color: '#0f172a', fontSize: '1.35rem', fontWeight: '700' }}>How to Delete Your Account &amp; Connected Data</h2>
+          <p>
+            You can delete your account using any of the three methods below. All methods will delete your Meta and Google data.
+          </p>
 
-              <hr style={{ border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' }} />
+          {/* Method 1 */}
+          <h3 style={h3Style}>Method 1: Email Request (Recommended for All Data)</h3>
+          <p>
+            This is the fastest way to delete your Adroof account + all Meta + Google data together.
+          </p>
+          <ol style={olStyle}>
+            <li>Send an email to <strong><a href="mailto:info@adroof.in" style={{ color: 'var(--brand-orange)', textDecoration: 'none' }}>info@adroof.in</a></strong> from your registered email address.</li>
+            <li>Use the subject line: <strong>Delete My Adroof Account</strong></li>
+            <li>In the email, confirm that you want to delete your account and revoke all Meta and Google access.</li>
+          </ol>
+          <p style={{
+            background: 'rgba(22, 163, 74, 0.04)',
+            borderLeft: '4px solid #16a34a',
+            padding: '12px 16px',
+            borderRadius: '0 8px 8px 0',
+            fontWeight: '500',
+            color: '#0f172a'
+          }}>
+            ✅ Our team will process your request within <strong>7 business days</strong>. We will revoke all access tokens and permanently delete your data. You will receive a confirmation email once completed.
+          </p>
 
-              {/* Confirmation Checkbox */}
-              <label style={{
-                display: 'flex',
-                gap: '0.75rem',
-                alignItems: 'flex-start',
-                cursor: 'pointer',
-                padding: '16px',
-                borderRadius: '12px',
-                border: confirmed ? '2px solid #dc2626' : '2px solid rgba(15, 23, 42, 0.1)',
-                background: confirmed ? 'rgba(220, 38, 38, 0.03)' : 'transparent',
-                transition: 'all 0.25s ease',
-              }}>
-                <input
-                  type="checkbox"
-                  checked={confirmed}
-                  onChange={(e) => setConfirmed(e.target.checked)}
-                  style={{
-                    width: '20px', height: '20px', marginTop: '2px',
-                    accentColor: '#dc2626', cursor: 'pointer',
-                  }}
-                />
-                <span style={{ fontSize: '0.95rem', color: '#0f172a', fontWeight: '500' }}>
-                  I understand that deleting my account will <strong>permanently remove all my data</strong>, including profile information, campaign history, booking records, connected accounts, and payment details. This action is <strong>irreversible</strong>.
-                </span>
-              </label>
+          {/* Method 2 */}
+          <h3 style={h3Style}>Method 2: Facebook Data Deletion (For Meta Data Only)</h3>
+          <p>
+            This will delete only your Facebook/Instagram data from Adroof.
+          </p>
+          <ol style={olStyle}>
+            <li>Go to your Facebook account &gt; Settings &amp; Privacy &gt; Settings.</li>
+            <li>Click on &quot;Apps and Websites&quot; in the left menu.</li>
+            <li>Find &quot;Adroof&quot; in the list of Active apps and click &quot;Remove&quot;.</li>
+            <li>In the pop-up, check the box: &quot;Also delete all posts, photos, and videos that Adroof may have published on your behalf&quot; and confirm.</li>
+          </ol>
+          <p>
+            This sends an automated deletion request to our servers. We will delete all your Meta data within 7 business days.
+          </p>
 
-              {/* Submit Button */}
-              <button
-                onClick={handleSubmit}
-                disabled={!confirmed}
-                style={{
-                  width: '100%',
-                  padding: '14px 24px',
-                  borderRadius: '14px',
-                  border: 'none',
-                  fontSize: '1rem',
-                  fontWeight: '700',
-                  cursor: confirmed ? 'pointer' : 'not-allowed',
-                  color: '#fff',
-                  background: confirmed
-                    ? 'linear-gradient(135deg, #dc2626, #b91c1c)'
-                    : '#cbd5e1',
-                  boxShadow: confirmed ? '0 4px 20px rgba(220, 38, 38, 0.3)' : 'none',
-                  transition: 'all 0.3s ease',
-                  letterSpacing: '0.02em',
-                }}
-              >
-                {confirmed ? '🗑️ Request Account Deletion' : 'Please confirm above to proceed'}
-              </button>
-            </>
-          ) : (
-            /* Success State */
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', padding: '2rem 0', textAlign: 'center' }}>
-              <div style={{
-                width: '72px', height: '72px', borderRadius: '50%',
-                background: 'rgba(22, 163, 74, 0.08)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5" style={{ width: '36px', height: '36px' }}>
-                  <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h2 style={{ color: '#0f172a', fontSize: '1.5rem', fontWeight: '700' }}>Request Initiated</h2>
-              <p style={{ maxWidth: '400px', color: '#475569' }}>
-                Your email client has been opened with a pre-filled deletion request to <strong>info@adroof.in</strong>. Please send the email to complete your request.
-              </p>
-              <p style={{
-                background: 'rgba(22, 163, 74, 0.04)',
-                borderLeft: '4px solid #16a34a',
-                padding: '12px 16px',
-                borderRadius: '0 8px 8px 0',
-                fontWeight: '500',
-                color: '#0f172a',
-                textAlign: 'left',
-                width: '100%',
-              }}>
-                ✅ Your account and all associated data will be permanently deleted within <strong>7 to 10 business days</strong> after we receive your email. A confirmation will be sent to you once completed.
-              </p>
-              <a href="/" className="download-btn" style={{
-                padding: '12px 28px',
-                borderRadius: '14px',
-                fontSize: '0.95rem',
-                marginTop: '0.5rem',
-                display: 'inline-block',
-                textDecoration: 'none',
-              }}>
-                Return to Home
+          {/* Method 3 */}
+          <h3 style={h3Style}>Method 3: Google Account Revocation (For Google Data Only)</h3>
+          <p>
+            This will delete only your Google My Business and Google Ads data from Adroof.
+          </p>
+          <ol style={olStyle}>
+            <li>Go to your Google Account permissions page:{' '}
+              <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' }}>
+                https://myaccount.google.com/permissions
               </a>
-            </div>
-          )}
+            </li>
+            <li>Find &quot;Adroof&quot; in the list of &quot;Third-party apps with account access&quot;.</li>
+            <li>Click on &quot;Adroof&quot; and then click the &quot;Remove Access&quot; button.</li>
+            <li>Confirm the removal.</li>
+          </ol>
+          <p>
+            This immediately revokes our access tokens. Our system will automatically detect the revocation and delete all your Google-related data from our servers within 7 business days.
+          </p>
+
+          <hr style={{ border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' }} />
+
+          <p>
+            For any questions regarding account or data deletion, contact us at{' '}
+            <a href="mailto:info@adroof.in" style={{ color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' }}>info@adroof.in</a>.
+          </p>
+          <p style={contactBoxStyle}>
+            <strong>Gore Enterprises</strong><br />
+            House No 4, Kumbhar Wasti, Ravalgaon, Mirajgaon, Ahmednagar, Maharashtra - 414401<br />
+            Phone: +91 73502 72829
+          </p>
         </div>
       </main>
 

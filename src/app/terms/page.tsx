@@ -1,12 +1,32 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
 
-type Tab = 'general' | 'meta';
-
 export default function TermsAndConditions() {
-  const [activeTab, setActiveTab] = useState<Tab>('general');
+  const sectionCard = {
+    width: '100%',
+    textAlign: 'left' as const,
+    background: 'rgba(255, 255, 255, 0.8)',
+    border: '1px solid rgba(15, 23, 42, 0.08)',
+    borderRadius: '16px',
+    padding: 'clamp(20px, 5vw, 40px)',
+    boxShadow: '0 10px 30px rgba(15, 23, 42, 0.03)',
+    lineHeight: '1.7',
+    color: '#334155',
+  };
+
+  const h2Style = { color: '#0f172a', fontSize: '1.5rem', fontWeight: '700' as const };
+  const h3Style = { color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' as const };
+  const ulStyle = { paddingLeft: '20px', listStyleType: 'disc' as const, display: 'flex', flexDirection: 'column' as const, gap: '0.5rem' };
+  const olStyle = { paddingLeft: '20px', listStyleType: 'decimal' as const, display: 'flex', flexDirection: 'column' as const, gap: '0.5rem' };
+  const hrStyle = { border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' };
+  const contactBoxStyle = {
+    background: 'rgba(255, 106, 0, 0.04)',
+    borderLeft: '4px solid var(--brand-orange)',
+    padding: '12px 16px',
+    borderRadius: '0 8px 8px 0',
+    fontWeight: '500' as const,
+    color: '#0f172a',
+  };
+  const linkStyle = { color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' as const };
 
   return (
     <div className="main-wrapper">
@@ -47,209 +67,306 @@ export default function TermsAndConditions() {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '100%', marginBottom: '2.5rem' }}>
           <p className="intro-badge">LEGAL COMPLIANCE</p>
           <h1 className="main-title" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>Terms &amp; Conditions</h1>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Last Updated: June 30, 2026</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Last Updated: July 1, 2026</p>
         </div>
 
-        {/* Dynamic Tab Bar */}
-        <div style={{
-          display: 'flex',
-          width: '100%',
-          overflowX: 'auto',
-          borderBottom: '1px solid rgba(15, 23, 42, 0.08)',
-          marginBottom: '2rem',
-          gap: '1rem',
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
-        }}>
-          {(['general', 'meta'] as Tab[]).map((tab) => {
-            const labels: Record<Tab, string> = {
-              general: 'General Terms',
-              meta: 'Meta Terms',
-            };
-            const isActive = activeTab === tab;
-            return (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                style={{
-                  padding: '12px 20px',
-                  background: 'none',
-                  border: 'none',
-                  borderBottom: isActive ? '3px solid var(--brand-orange)' : '3px solid transparent',
-                  color: isActive ? 'var(--brand-orange)' : '#475569',
-                  fontWeight: isActive ? '700' : '500',
-                  fontSize: '1rem',
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                  transition: 'all 0.25s ease',
-                }}
-              >
-                {labels[tab]}
-              </button>
-            );
-          })}
-        </div>
+        {/* All Terms Sections Stacked Vertically */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', width: '100%' }}>
 
-        {/* Tab Content Area */}
-        <div style={{
-          width: '100%',
-          textAlign: 'left',
-          background: 'rgba(255, 255, 255, 0.8)',
-          border: '1px solid rgba(15, 23, 42, 0.08)',
-          borderRadius: '16px',
-          padding: 'clamp(20px, 5vw, 40px)',
-          boxShadow: '0 10px 30px rgba(15, 23, 42, 0.03)',
-          lineHeight: '1.7',
-          color: '#334155'
-        }}>
-          {activeTab === 'general' && (
+          {/* ===== SECTION 1: GENERAL TERMS & CONDITIONS ===== */}
+          <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={{ color: '#0f172a', fontSize: '1.5rem', fontWeight: '700' }}>General Terms &amp; Conditions</h2>
+              <h2 style={h2Style}>General Terms &amp; Conditions</h2>
               <p>
                 Welcome to Adroof! These General Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Adroof platform (&quot;Service&quot;) operated by Gore Enterprises (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using the Service, you agree to be bound by these Terms.
               </p>
 
-              <hr style={{ border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' }} />
+              <hr style={hrStyle} />
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>1. Acceptance of Terms</h3>
+              <h3 style={h3Style}>1. Acceptance of Terms</h3>
               <p>
                 By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Service. Continued use of the platform after changes to the Terms constitutes acceptance of those changes.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>2. Description of Service</h3>
+              <h3 style={h3Style}>2. Description of Service</h3>
               <p>
                 Adroof is an all-in-one offline &amp; digital advertising platform that enables local businesses and brands to book physical hoardings, banners, flyer distributions, vehicle voice announcements, and run optimized Meta &amp; Google ad campaigns from a single application.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>3. User Accounts and Responsibilities</h3>
+              <h3 style={h3Style}>3. User Accounts and Responsibilities</h3>
               <p>
                 You are responsible for safeguarding your account and for any activities or actions under your account. You agree not to:
               </p>
-              <ul style={{ paddingLeft: '20px', listStyleType: 'disc', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <ul style={ulStyle}>
                 <li>Use the Service for any unlawful or fraudulent purpose.</li>
                 <li>Misrepresent your identity or business details.</li>
                 <li>Submit false campaign information or misleading advertising content.</li>
                 <li>Attempt to gain unauthorized access to the platform or other user accounts.</li>
               </ul>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>4. Subscription and Payments</h3>
+              <h3 style={h3Style}>4. Subscription and Payments</h3>
               <p>
-                Adroof offers paid subscription plans and individual booking services. All subscription fees are <strong>non-refundable</strong>. Booking services may be cancelled and refunded within 7 days of payment, subject to our <a href="/privacy-policy" style={{ color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' }}>Payment Policy</a>.
+                Adroof offers paid subscription plans and individual booking services. All subscription fees are <strong>non-refundable</strong>. Booking services may be cancelled and refunded within 7 days of payment, subject to our <a href="/privacy-policy" style={linkStyle}>Payment Policy</a>.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>5. Intellectual Property</h3>
+              <h3 style={h3Style}>5. Intellectual Property</h3>
               <p>
                 The Service and its original content, features, and functionality are and will remain the exclusive property of Gore Enterprises. You retain all ownership rights to the content you submit through Adroof for advertising purposes.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>6. Limitation of Liability</h3>
+              <h3 style={h3Style}>6. Limitation of Liability</h3>
               <p>
                 Gore Enterprises shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the Service. Our total liability to you for any claim shall not exceed the amount you paid us in the last 3 months.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>7. Termination</h3>
+              <h3 style={h3Style}>7. Termination</h3>
               <p>
-                We may terminate or suspend your account immediately, without prior notice, if you breach these Terms. You may terminate your account at any time by visiting the <a href="/delete-account" style={{ color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' }}>Delete Account</a> page or contacting us at info@adroof.in.
+                We may terminate or suspend your account immediately, without prior notice, if you breach these Terms. You may terminate your account at any time by visiting the <a href="/delete-account" style={linkStyle}>Delete Account</a> page or contacting us at info@adroof.in.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>8. Governing Law</h3>
+              <h3 style={h3Style}>8. Governing Law</h3>
               <p>
                 These Terms shall be governed by the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>9. Contact Us</h3>
+              <h3 style={h3Style}>9. Contact Us</h3>
               <p>
                 If you have any questions about these Terms, please contact us:
               </p>
-              <p style={{
-                background: 'rgba(255, 106, 0, 0.04)',
-                borderLeft: '4px solid var(--brand-orange)',
-                padding: '12px 16px',
-                borderRadius: '0 8px 8px 0',
-                fontWeight: '500',
-                color: '#0f172a'
-              }}>
+              <p style={contactBoxStyle}>
                 <strong>Gore Enterprises</strong><br />
                 Email: info@adroof.in<br />
                 Address: House No 4, Kumbhar Wasti, Ravalgaon, Ravalgaon-Guravpimpri Rd, Mirajgaon, Ahmednagar, Maharashtra - 414401<br />
                 Phone: +91 73502 72829
               </p>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'meta' && (
+          {/* ===== SECTION 2: META TERMS OF SERVICE ===== */}
+          <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={{ color: '#0f172a', fontSize: '1.5rem', fontWeight: '700' }}>Terms of Service for Adroof</h2>
+              <h2 style={h2Style}>Terms of Service for Adroof</h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Last Updated: July 1, 2026</p>
+
+              <hr style={hrStyle} />
+
+              <h3 style={h3Style}>1. Agreement to Terms</h3>
               <p>
-                Welcome to Adroof! These Terms of Service (&quot;Terms&quot;) govern your use of the Adroof application (&quot;Service&quot;) operated by Gore Enterprises (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
+                By accessing or using the Adroof application and website (&quot;Service&quot;) operated by Gore Enterprises (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you disagree with any part of these terms, you do not have permission to access the Service.
               </p>
 
-              <hr style={{ border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' }} />
-
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>1. Acceptance of Terms</h3>
+              <h3 style={h3Style}>2. Description of Service</h3>
               <p>
-                By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Service.
+                Adroof is a social media management and advertising analytics platform. The Service allows users to:
+              </p>
+              <ol style={olStyle}>
+                <li>Connect their Facebook Pages, Instagram Business Accounts, and Meta Ad Accounts.</li>
+                <li>Schedule and publish content to their connected social media accounts.</li>
+                <li>View analytics and performance reports for their social media content and advertising campaigns.</li>
+                <li>Manage and respond to comments and messages received on their Facebook Pages.</li>
+              </ol>
+
+              <h3 style={h3Style}>3. User Accounts and Responsibilities</h3>
+              <p>
+                <strong>a. Account Creation:</strong> You must provide accurate and complete information when creating an account. You are responsible for safeguarding your password.
+              </p>
+              <p>
+                <strong>b. User Conduct:</strong> You agree not to use the Service for any unlawful purpose. You are solely responsible for all content you post through Adroof. You agree not to post content that violates Meta&apos;s Community Standards, including hate speech, harassment, or spam.
+              </p>
+              <p>
+                <strong>c. Compliance with Meta Policies:</strong> By using Adroof, you also agree to be bound by Meta&apos;s Terms of Service, Community Standards, and Platform Terms. You understand that Adroof&apos;s access to Meta data is subject to your permissions and Meta&apos;s policies.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>2. Description of Service</h3>
+              <h3 style={h3Style}>4. Facebook and Instagram Integration</h3>
               <p>
-                Adroof is a social media management tool that allows users to connect their Facebook Pages, Instagram Business Accounts, and Ad Accounts to schedule content, publish posts, and view analytics.
+                <strong>a. Permissions:</strong> When you use &quot;Login with Facebook,&quot; you grant Adroof permission to access and manage your Facebook Pages and Instagram Accounts as detailed in our Privacy Policy. This includes permission to publish content and read insights on your behalf.
+              </p>
+              <p>
+                <strong>b. Your Data:</strong> You retain all ownership rights to the content you post through Adroof. You grant us a license to use your content solely for the purpose of providing the Service to you.
+              </p>
+              <p>
+                <strong>c. API Limitations:</strong> You acknowledge that Adroof&apos;s functionality is dependent on the availability of Meta&apos;s APIs. We are not liable for any service interruptions caused by changes to Meta&apos;s Platform.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>3. User Accounts and Responsibilities</h3>
+              <h3 style={h3Style}>5. Subscription, Payments, and Refunds</h3>
               <p>
-                You are responsible for safeguarding your account and for any activities or actions under your account. You agree not to use the Service for any unlawful purpose, including posting spam, hate speech, or content that violates Meta&apos;s Community Standards. You must comply with Meta&apos;s Platform Terms and Developer Policies.
+                <strong>a. Paid Services:</strong> Adroof offers subscription plans. By selecting a paid plan, you agree to pay the applicable fees.
+              </p>
+              <p>
+                <strong>b. Billing:</strong> We use Razorpay, a third-party payment processor, to bill you. You authorize us to charge your payment method for all fees.
+              </p>
+              <p>
+                <strong>c. Refund Policy:</strong> All subscription plans purchased on the Adroof platform are non-refundable and non-cancellable, as stated in our Payment Policy. Please review your plan carefully before purchase.
+              </p>
+              <p>
+                <strong>d. Auto-Renewal:</strong> Your subscription will automatically renew at the end of each billing cycle unless you cancel it from your account settings before the renewal date.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>4. Facebook and Instagram Integration</h3>
+              <h3 style={h3Style}>6. Intellectual Property</h3>
               <p>
-                Our Service integrates with Meta&apos;s platforms. By using Adroof, you also agree to be bound by Meta&apos;s Terms of Service and Community Standards. You grant Adroof permission to access and manage your Facebook Pages and Instagram Accounts as per the permissions you approve during Facebook Login.
+                The Service and its original content, features, and functionality are and will remain the exclusive property of Gore Enterprises. Our trademarks may not be used in connection with any product or service without our prior written consent.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>5. Subscription and Payments</h3>
+              <h3 style={h3Style}>7. Termination</h3>
               <p>
-                Adroof is a paid subscription service. All fees are non-refundable. We use third-party payment processors like Razorpay to bill you. Your subscription will auto-renew until you cancel it from your account settings.
+                <strong>a. By You:</strong> You may terminate your account at any time by contacting us at <a href="mailto:info@adroof.in" style={linkStyle}>info@adroof.in</a> or by using the account deletion feature in the app.
+              </p>
+              <p>
+                <strong>b. By Us:</strong> We may terminate or suspend your account immediately, without prior notice or liability, if you breach these Terms or Meta&apos;s policies. Upon termination, your right to use the Service will immediately cease.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>6. Intellectual Property</h3>
+              <h3 style={h3Style}>8. Limitation of Liability</h3>
               <p>
-                The Service and its original content, features, and functionality are and will remain the exclusive property of Gore Enterprises. You retain all ownership rights to the content you post through Adroof.
+                To the maximum extent permitted by law, Gore Enterprises shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or goodwill, resulting from your access to or use of the Service. Our total liability to you for any claim shall not exceed the amount you paid to us in the last three (3) months.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>7. Limitation of Liability</h3>
+              <h3 style={h3Style}>9. Disclaimer of Warranties</h3>
               <p>
-                Gore Enterprises shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the Service. We do not guarantee uninterrupted access, especially due to changes in Meta&apos;s APIs. Our total liability to you for any claim shall not exceed the amount you paid us in the last 3 months.
+                The Service is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. We make no warranty that the Service will be uninterrupted, secure, or error-free. We are not responsible for the actions of third-party platforms like Meta.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>8. Termination</h3>
+              <h3 style={h3Style}>10. Governing Law</h3>
               <p>
-                We may terminate or suspend your account immediately, without prior notice, if you breach these Terms or Meta&apos;s policies. You may terminate your account at any time by contacting{' '}
-                <a href="mailto:info@adroof.in" style={{ color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' }}>info@adroof.in</a>.
+                These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>9. Governing Law</h3>
+              <h3 style={h3Style}>11. Changes to Terms</h3>
               <p>
-                These Terms shall be governed by the laws of India, without regard to its conflict of law provisions.
+                We reserve the right to modify these Terms at any time. We will provide notice of any changes by posting the new Terms on this page and updating the &quot;Last Updated&quot; date. Your continued use of the Service after any such changes constitutes your acceptance of the new Terms.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>10. Contact Us</h3>
+              <h3 style={h3Style}>12. Contact Us</h3>
               <p>
                 If you have any questions about these Terms, please contact us:
               </p>
+              <p style={contactBoxStyle}>
+                <strong>Gore Enterprises</strong><br />
+                Email: info@adroof.in<br />
+                Address: House No 4, Kumbhar Wasti, Ravalgaon-Guravpimpri Rd, Mirajgaon, Ahmednagar, Maharashtra, India - 414401<br />
+                Phone: +91 73502 72829
+              </p>
+            </div>
+          </div>
+
+          {/* ===== SECTION 3: GOOGLE TERMS & CONDITIONS ===== */}
+          <div style={sectionCard}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <h2 style={h2Style}>Terms &amp; Conditions for Adroof</h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Last Updated: July 1, 2026</p>
+
+              <hr style={hrStyle} />
+
+              <h3 style={h3Style}>1. Acceptance of Terms</h3>
+              <p>
+                By downloading, installing, or using the Adroof mobile application (&quot;App&quot;) operated by Gore Enterprises (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), you agree to be bound by these Terms and Conditions (&quot;Terms&quot;). If you do not agree, do not use the App.
+              </p>
+
+              <h3 style={h3Style}>2. Description of Service</h3>
+              <p>
+                Adroof is a social media management and advertising analytics platform. The App allows you to:
+              </p>
+              <ol style={olStyle}>
+                <li>Connect your Facebook Pages, Instagram Business Accounts, Google Ads, and Google Business Profile accounts.</li>
+                <li>Schedule and publish content to your connected social media accounts.</li>
+                <li>View analytics and performance reports for your social media and advertising campaigns.</li>
+                <li>Manage customer reviews and messages from Google Business Profile.</li>
+              </ol>
+
+              <h3 style={h3Style}>3. User Accounts and Your Responsibilities</h3>
+              <p>
+                <strong>a. Accurate Information:</strong> You agree to provide accurate information and keep it updated.
+              </p>
+              <p>
+                <strong>b. Account Security:</strong> You are responsible for all activity that occurs under your account. Keep your password secure.
+              </p>
+              <p>
+                <strong>c. Prohibited Conduct:</strong> You agree not to use the App to post spam, illegal content, or content that violates Google&apos;s or Meta&apos;s policies. You must comply with Google Play&apos;s Developer Program Policies and the Google API Services User Data Policy.
+              </p>
+              <p>
+                <strong>d. Third-Party Platforms:</strong> Your use of Facebook, Instagram, and Google services through Adroof is also subject to their respective terms. Adroof is not responsible for the actions of these third-party platforms.
+              </p>
+
+              <h3 style={h3Style}>4. Subscriptions, Payments, and Billing</h3>
+              <p>
+                <strong>a. In-App Purchases:</strong> Adroof offers auto-renewing subscriptions purchased through Google Play Billing.
+              </p>
+              <p>
+                <strong>b. Billing:</strong> Payment will be charged to your Google Play account at confirmation of purchase. Subscriptions automatically renew unless auto-renew is turned off at least 24-hours before the end of the current period.
+              </p>
+              <p>
+                <strong>c. Managing Subscriptions:</strong> You can manage and cancel your subscriptions by going to your Google Play Store account settings after purchase.
+              </p>
+              <p>
+                <strong>d. Refund Policy:</strong> All subscription purchases are final and non-refundable as per Google Play&apos;s policies. For booking services purchased directly, our 7-day refund policy applies as stated in our Payment Policy. Please review before purchasing.
+              </p>
+
+              <h3 style={h3Style}>5. Google API Services Disclosure</h3>
+              <p>
+                Adroof&apos;s use and transfer of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements. We use Google data solely to provide the features of the Adroof app. We do not transfer Google user data to any third parties except as necessary to provide the Service.
+              </p>
               <p style={{
-                background: 'rgba(255, 106, 0, 0.04)',
-                borderLeft: '4px solid var(--brand-orange)',
+                background: 'rgba(59, 130, 246, 0.04)',
+                borderLeft: '4px solid #3b82f6',
                 padding: '12px 16px',
                 borderRadius: '0 8px 8px 0',
                 fontWeight: '500',
                 color: '#0f172a'
               }}>
+                ℹ️ Adroof&apos;s use of Google data is limited to providing and improving the app&apos;s features for the user. We do not sell, license, or share Google user data for advertising purposes.
+              </p>
+
+              <h3 style={h3Style}>6. Intellectual Property</h3>
+              <p>
+                The App and its original content, features, and functionality are owned by Gore Enterprises and are protected by international copyright, trademark, and other intellectual property laws. You retain ownership of the content you create and post through the App.
+              </p>
+
+              <h3 style={h3Style}>7. Termination</h3>
+              <p>
+                <strong>a. By You:</strong> You may delete your account at any time via the in-app settings or by emailing <a href="mailto:info@adroof.in" style={linkStyle}>info@adroof.in</a>.
+              </p>
+              <p>
+                <strong>b. By Us:</strong> We may suspend or terminate your access if you violate these Terms or Google&apos;s policies. We will provide notice when possible.
+              </p>
+
+              <h3 style={h3Style}>8. Disclaimers and Limitation of Liability</h3>
+              <p>
+                <strong>a.</strong> The App is provided &quot;AS IS&quot; without warranties of any kind. We do not guarantee that the App will be error-free or uninterrupted.
+              </p>
+              <p>
+                <strong>b.</strong> Gore Enterprises is not liable for any damages arising from your use of the App, including loss of data, profits, or goodwill. Our total liability will not exceed the amount you paid us in the last 3 months.
+              </p>
+              <p>
+                <strong>c.</strong> We are not responsible for service interruptions caused by changes to third-party APIs like Meta or Google.
+              </p>
+
+              <h3 style={h3Style}>9. Indemnification</h3>
+              <p>
+                You agree to indemnify and hold Gore Enterprises harmless from any claims resulting from your violation of these Terms or your violation of any rights of a third party.
+              </p>
+
+              <h3 style={h3Style}>10. Governing Law</h3>
+              <p>
+                These Terms are governed by the laws of India. Any disputes will be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.
+              </p>
+
+              <h3 style={h3Style}>11. Changes to Terms</h3>
+              <p>
+                We may update these Terms from time to time. We will post the new Terms on this page and update the &quot;Last Updated&quot; date. Continued use of the App after changes means you accept the new Terms.
+              </p>
+
+              <h3 style={h3Style}>12. Contact Us</h3>
+              <p>
+                For any questions about these Terms, please contact:
+              </p>
+              <p style={contactBoxStyle}>
                 <strong>Gore Enterprises</strong><br />
                 Email: info@adroof.in<br />
-                Address: Mirajgaon, Ahmednagar, Maharashtra 414401, India
+                Address: House No 4, Kumbhar Wasti, Ravalgaon, Mirajgaon, Ahmednagar, Maharashtra - 414401<br />
+                Phone: +91 73502 72829
               </p>
             </div>
-          )}
+          </div>
+
         </div>
       </main>
 

@@ -132,7 +132,7 @@ export default function PrivacyPolicy() {
           {/* ===== SECTION 2: META / FACEBOOK PRIVACY POLICY ===== */}
           <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={h2Style}>Privacy Policy for Adroof</h2>
+              <h2 style={h2Style}>Privacy Policy for Meta</h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Last Updated: July 1, 2026</p>
 
               <hr style={hrStyle} />
