@@ -74,169 +74,66 @@ export default function TermsAndConditions() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', width: '100%' }}>
           <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={h2Style}>General Terms &amp; Conditions</h2>
-              <p>
-                Welcome to Adroof! These General Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Adroof platform (&quot;Service&quot;) operated by Gore Enterprises (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using the Service, you agree to be bound by these Terms.
-              </p>
-
-              <hr style={hrStyle} />
-
               <h3 style={h3Style}>1. Acceptance of Terms</h3>
               <p>
-                By downloading, installing, or using the Adroof mobile application (&quot;App&quot;) operated by Gore Enterprises (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), you agree to be bound by these Terms and Conditions (&quot;Terms&quot;). If you do not agree, do not use the App.
+                Welcome to Adroof! These Terms and Conditions (&quot;Terms&quot;) govern your use of the Adroof mobile application and website (&quot;Service&quot;) operated by Gore Enterprises (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;).
+              </p>
+              <p>
+                By downloading, installing, or using the Service, you agree to be bound by these Terms. If you do not agree, do not use the Service. Your continued use after changes to these Terms constitutes acceptance of those changes.
               </p>
 
               <h3 style={h3Style}>2. Description of Service</h3>
               <p>
-                Adroof is an all-in-one offline &amp; digital advertising platform that enables local businesses and brands to book physical hoardings, banners, flyer distributions, vehicle voice announcements, and run optimized Meta &amp; Google ad campaigns from a single application.
-              </p>
-
-              <h3 style={h3Style}>3. User Accounts and Responsibilities</h3>
-              <p>
-                You are responsible for safeguarding your account and for any activities or actions under your account. You agree not to:
-              </p>
-              <ul style={ulStyle}>
-                <li>Use the Service for any unlawful or fraudulent purpose.</li>
-                <li>Misrepresent your identity or business details.</li>
-                <li>Submit false campaign information or misleading advertising content.</li>
-                <li>Attempt to gain unauthorized access to the platform or other user accounts.</li>
-              </ul>
-
-              <h3 style={h3Style}>4. Subscription and Payments</h3>
-              <p>
-                Adroof offers paid subscription plans and individual booking services. All subscription fees are <strong>non-refundable</strong>. Booking services may be cancelled and refunded within 7 days of payment, subject to our <a href="/privacy-policy" style={linkStyle}>Payment Policy</a>.
-              </p>
-
-              <h3 style={h3Style}>5. Intellectual Property</h3>
-              <p>
-                The Service and its original content, features, and functionality are and will remain the exclusive property of Gore Enterprises. You retain all ownership rights to the content you submit through Adroof for advertising purposes.
-              </p>
-
-              <h3 style={h3Style}>6. Limitation of Liability</h3>
-              <p>
-                Gore Enterprises shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the Service. Our total liability to you for any claim shall not exceed the amount you paid us in the last 3 months.
-              </p>
-
-              <h3 style={h3Style}>7. Termination</h3>
-              <p>
-                We may terminate or suspend your account immediately, without prior notice, if you breach these Terms. You may terminate your account at any time by visiting the <a href="/delete-account" style={linkStyle}>Delete Account</a> page or contacting us at info@adroof.in.
-              </p>
-
-              <h3 style={h3Style}>8. Governing Law</h3>
-              <p>
-                These Terms shall be governed by the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.
-              </p>
-
-              {/* ---------- META CONTENT CONTINUES ---------- */}
-
-              <h3 style={h3Style}>9. Description of Service</h3>
-              <p>
-                Adroof is a social media management and advertising analytics platform. The Service allows users to:
+                Adroof is an all-in-one offline &amp; digital advertising platform that enables businesses to:
               </p>
               <ol style={olStyle}>
-                <li>Connect their Facebook Pages, Instagram Business Accounts, and Meta Ad Accounts.</li>
-                <li>Schedule and publish content to their connected social media accounts.</li>
-                <li>View analytics and performance reports for their social media content and advertising campaigns.</li>
-                <li>Manage and respond to comments and messages received on their Facebook Pages.</li>
+                <li>Book physical hoardings, banners, flyer distributions, and vehicle voice announcements.</li>
+                <li>Connect Facebook Pages, Instagram Business Accounts, Google Ads, and Google Business Profile accounts.</li>
+                <li>Schedule and publish content to connected social media accounts.</li>
+                <li>View analytics and performance reports for social media and advertising campaigns.</li>
+                <li>Manage customer reviews and messages from Google Business Profile and Facebook Pages.</li>
               </ol>
 
-              <h3 style={h3Style}>10. User Accounts and Responsibilities</h3>
+              <h3 style={h3Style}>3. User Accounts and Your Responsibilities</h3>
               <p>
-                <strong>a. Account Creation:</strong> You must provide accurate and complete information when creating an account. You are responsible for safeguarding your password.
+                <strong>a. Accurate Information:</strong> You agree to provide accurate information and keep it updated. You are responsible for all activity that occurs under your account.
               </p>
               <p>
-                <strong>b. User Conduct:</strong> You agree not to use the Service for any unlawful purpose. You are solely responsible for all content you post through Adroof. You agree not to post content that violates Meta&apos;s Community Standards, including hate speech, harassment, or spam.
+                <strong>b. Account Security:</strong> Keep your password secure. You are responsible for any unauthorized use of your account.
               </p>
               <p>
-                <strong>c. Compliance with Meta Policies:</strong> By using Adroof, you also agree to be bound by Meta&apos;s Terms of Service, Community Standards, and Platform Terms. You understand that Adroof&apos;s access to Meta data is subject to your permissions and Meta&apos;s policies.
-              </p>
-
-              <h3 style={h3Style}>11. Facebook and Instagram Integration</h3>
-              <p>
-                <strong>a. Permissions:</strong> When you use &quot;Login with Facebook,&quot; you grant Adroof permission to access and manage your Facebook Pages and Instagram Accounts as detailed in our Privacy Policy. This includes permission to publish content and read insights on your behalf.
-              </p>
-              <p>
-                <strong>b. Your Data:</strong> You retain all ownership rights to the content you post through Adroof. You grant us a license to use your content solely for the purpose of providing the Service to you.
-              </p>
-              <p>
-                <strong>c. API Limitations:</strong> You acknowledge that Adroof&apos;s functionality is dependent on the availability of Meta&apos;s APIs. We are not liable for any service interruptions caused by changes to Meta&apos;s Platform.
-              </p>
-
-              <h3 style={h3Style}>12. Subscription, Payments, and Refunds</h3>
-              <p>
-                <strong>a. Paid Services:</strong> Adroof offers subscription plans. By selecting a paid plan, you agree to pay the applicable fees.
-              </p>
-              <p>
-                <strong>b. Billing:</strong> We use Razorpay, a third-party payment processor, to bill you. You authorize us to charge your payment method for all fees.
-              </p>
-              <p>
-                <strong>c. Refund Policy:</strong> All subscription plans purchased on the Adroof platform are non-refundable and non-cancellable, as stated in our Payment Policy. Please review your plan carefully before purchase.
-              </p>
-              <p>
-                <strong>d. Auto-Renewal:</strong> Your subscription will automatically renew at the end of each billing cycle unless you cancel it from your account settings before the renewal date.
-              </p>
-
-              <h3 style={h3Style}>13. Intellectual Property</h3>
-              <p>
-                The Service and its original content, features, and functionality are and will remain the exclusive property of Gore Enterprises. Our trademarks may not be used in connection with any product or service without our prior written consent.
-              </p>
-
-              <h3 style={h3Style}>14. Termination</h3>
-              <p>
-                <strong>a. By You:</strong> You may terminate your account at any time by contacting us at <a href="mailto:info@adroof.in" style={linkStyle}>info@adroof.in</a> or by using the account deletion feature in the app.
-              </p>
-              <p>
-                <strong>b. By Us:</strong> We may terminate or suspend your account immediately, without prior notice or liability, if you breach these Terms or Meta&apos;s policies. Upon termination, your right to use the Service will immediately cease.
-              </p>
-
-              <h3 style={h3Style}>15. Limitation of Liability</h3>
-              <p>
-                To the maximum extent permitted by law, Gore Enterprises shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or goodwill, resulting from your access to or use of the Service. Our total liability to you for any claim shall not exceed the amount you paid to us in the last three (3) months.
-              </p>
-
-              <h3 style={h3Style}>16. Disclaimer of Warranties</h3>
-              <p>
-                The Service is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. We make no warranty that the Service will be uninterrupted, secure, or error-free. We are not responsible for the actions of third-party platforms like Meta.
-              </p>
-
-              <h3 style={h3Style}>17. Governing Law</h3>
-              <p>
-                These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.
-              </p>
-
-              <h3 style={h3Style}>18. Changes to Terms</h3>
-              <p>
-                We reserve the right to modify these Terms at any time. We will provide notice of any changes by posting the new Terms on this page and updating the &quot;Last Updated&quot; date. Your continued use of the Service after any such changes constitutes your acceptance of the new Terms.
-              </p>
-
-              {/* ---------- GOOGLE CONTENT CONTINUES ---------- */}
-
-              <h3 style={h3Style}>19. Description of Service</h3>
-              <p>
-                Adroof is a social media management and advertising analytics platform. The App allows you to:
-              </p>
-              <ol style={olStyle}>
-                <li>Connect your Facebook Pages, Instagram Business Accounts, Google Ads, and Google Business Profile accounts.</li>
-                <li>Schedule and publish content to your connected social media accounts.</li>
-                <li>View analytics and performance reports for your social media and advertising campaigns.</li>
-                <li>Manage customer reviews and messages from Google Business Profile.</li>
-              </ol>
-
-              <h3 style={h3Style}>20. User Accounts and Your Responsibilities</h3>
-              <p>
-                <strong>a. Accurate Information:</strong> You agree to provide accurate information and keep it updated.
-              </p>
-              <p>
-                <strong>b. Account Security:</strong> You are responsible for all activity that occurs under your account. Keep your password secure.
-              </p>
-              <p>
-                <strong>c. Prohibited Conduct:</strong> You agree not to use the App to post spam, illegal content, or content that violates Google&apos;s or Meta&apos;s policies. You must comply with Google Play&apos;s Developer Program Policies and the Google API Services User Data Policy.
+                <strong>c. Prohibited Conduct:</strong> You agree not to use the Service to post spam, illegal content, or content that violates Google&apos;s Community Guidelines or Meta&apos;s Community Standards. You must comply with Google Play&apos;s Developer Program Policies and the Google API Services User Data Policy.
               </p>
               <p>
                 <strong>d. Third-Party Platforms:</strong> Your use of Facebook, Instagram, and Google services through Adroof is also subject to their respective terms. Adroof is not responsible for the actions of these third-party platforms.
               </p>
 
-              <h3 style={h3Style}>21. Subscriptions, Payments, and Billing</h3>
+              <h3 style={h3Style}>4. Meta Platform Integration (Facebook &amp; Instagram)</h3>
+              <p>
+                <strong>a. Permissions:</strong> When you use &quot;Login with Facebook,&quot; you grant Adroof permission to access and manage your Facebook Pages and Instagram Accounts as detailed in our Privacy Policy. This includes permission to publish content and read insights on your behalf.
+              </p>
+              <p>
+                <strong>b. Compliance with Meta Policies:</strong> By using Adroof, you also agree to be bound by Meta&apos;s Terms of Service, Community Standards, and Platform Terms. You understand that Adroof&apos;s access to Meta data is subject to your permissions and Meta&apos;s policies.
+              </p>
+              <p>
+                <strong>c. API Limitations:</strong> You acknowledge that Adroof&apos;s functionality is dependent on the availability of Meta&apos;s APIs. We are not liable for service interruptions caused by changes to Meta&apos;s Platform.
+              </p>
+
+              <h3 style={h3Style}>5. Google Platform Integration (Google Ads &amp; Google Business Profile)</h3>
+              <p>
+                <strong>a. Permissions:</strong> When you connect your Google Account, you grant Adroof permission to access your Google Ads data and Google Business Profile as detailed in our Privacy Policy.
+              </p>
+              <p>
+                <strong>b. Google API Services Disclosure:</strong> Adroof&apos;s use and transfer of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements. We use Google data solely to provide the features of the Adroof app. We do not transfer Google user data to any third parties except as necessary to provide the Service.
+              </p>
+              <p>
+                <strong>c. Limited Use:</strong> Adroof&apos;s use of Google data is limited to providing and improving the app&apos;s features for the user. We do not sell, license, or share Google user data for advertising purposes.
+              </p>
+              <p>
+                <strong>d. API Limitations:</strong> You acknowledge that Adroof&apos;s functionality is dependent on the availability of Google&apos;s APIs. We are not liable for service interruptions caused by changes to Google&apos;s Platform.
+              </p>
+
+              <h3 style={h3Style}>6. Subscriptions, Payments, and Billing</h3>
               <p>
                 <strong>a. In-App Purchases:</strong> Adroof offers auto-renewing subscriptions purchased through Google Play Billing.
               </p>
@@ -247,66 +144,54 @@ export default function TermsAndConditions() {
                 <strong>c. Managing Subscriptions:</strong> You can manage and cancel your subscriptions by going to your Google Play Store account settings after purchase.
               </p>
               <p>
-                <strong>d. Refund Policy:</strong> All subscription purchases are final and non-refundable as per Google Play&apos;s policies. For booking services purchased directly, our 7-day refund policy applies as stated in our Payment Policy. Please review before purchasing.
+                <strong>d. Refund Policy:</strong> All subscription purchases are final and non-refundable as per Google Play&apos;s policies. For offline booking services purchased directly through Adroof, our 7-day refund policy applies as stated in our Payment Policy. Please review before purchasing.
               </p>
 
-              <h3 style={h3Style}>22. Google API Services Disclosure</h3>
+              <h3 style={h3Style}>7. Intellectual Property</h3>
               <p>
-                Adroof&apos;s use and transfer of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements. We use Google data solely to provide the features of the Adroof app. We do not transfer Google user data to any third parties except as necessary to provide the Service.
-              </p>
-              <p style={{
-                background: 'rgba(59, 130, 246, 0.04)',
-                borderLeft: '4px solid #3b82f6',
-                padding: '12px 16px',
-                borderRadius: '0 8px 8px 0',
-                fontWeight: '500',
-                color: '#0f172a'
-              }}>
-                ℹ️ Adroof&apos;s use of Google data is limited to providing and improving the app&apos;s features for the user. We do not sell, license, or share Google user data for advertising purposes.
+                The Service and its original content, features, and functionality are owned by Gore Enterprises and are protected by international copyright, trademark, and other intellectual property laws. You retain ownership of the content you create and post through the App. You grant us a license to use your content solely for the purpose of providing the Service to you.
               </p>
 
-              <h3 style={h3Style}>23. Intellectual Property</h3>
+              <h3 style={h3Style}>8. Termination and Data Deletion</h3>
               <p>
-                The App and its original content, features, and functionality are owned by Gore Enterprises and are protected by international copyright, trademark, and other intellectual property laws. You retain ownership of the content you create and post through the App.
+                <strong>a. By You:</strong> You may delete your account at any time via the in-app settings or by emailing <a href="mailto:info@adroof.in" style={linkStyle}>info@adroof.in</a>. For full instructions, visit our Data Deletion page at <a href="https://www.adroof.online/delete-account" style={linkStyle} target="_blank" rel="noopener noreferrer">https://www.adroof.online/delete-account</a>.
+              </p>
+              <p>
+                <strong>b. By Us:</strong> We may suspend or terminate your access if you violate these Terms, Google&apos;s policies, or Meta&apos;s policies. We will provide notice when possible.
+              </p>
+              <p>
+                <strong>c. Data Deletion:</strong> Upon account deletion, all your data including Meta and Google data will be permanently removed from our servers within 7 business days, as described in our Data Deletion Instructions.
               </p>
 
-              <h3 style={h3Style}>24. Termination</h3>
+              <h3 style={h3Style}>9. Disclaimers and Limitation of Liability</h3>
               <p>
-                <strong>a. By You:</strong> You may delete your account at any time via the in-app settings or by emailing <a href="mailto:info@adroof.in" style={linkStyle}>info@adroof.in</a>.
+                <strong>a.</strong> The Service is provided &quot;AS IS&quot; without warranties of any kind. We do not guarantee that the Service will be error-free or uninterrupted.
               </p>
               <p>
-                <strong>b. By Us:</strong> We may suspend or terminate your access if you violate these Terms or Google&apos;s policies. We will provide notice when possible. Upon account deletion, all your data will be permanently removed within 7 business days.
-              </p>
-
-              <h3 style={h3Style}>25. Disclaimers and Limitation of Liability</h3>
-              <p>
-                <strong>a.</strong> The App is provided &quot;AS IS&quot; without warranties of any kind. We do not guarantee that the App will be error-free or uninterrupted.
-              </p>
-              <p>
-                <strong>b.</strong> Gore Enterprises is not liable for any damages arising from your use of the App, including loss of data, profits, or goodwill. Our total liability will not exceed the amount you paid us in the last 3 months.
+                <strong>b.</strong> Gore Enterprises is not liable for any damages arising from your use of the Service, including loss of data, profits, or goodwill. Our total liability will not exceed the amount you paid us in the last 3 months.
               </p>
               <p>
                 <strong>c.</strong> We are not responsible for service interruptions caused by changes to third-party APIs like Meta or Google.
               </p>
 
-              <h3 style={h3Style}>26. Indemnification</h3>
+              <h3 style={h3Style}>10. Indemnification</h3>
               <p>
                 You agree to indemnify and hold Gore Enterprises harmless from any claims resulting from your violation of these Terms or your violation of any rights of a third party.
               </p>
 
-              <h3 style={h3Style}>27. Governing Law</h3>
+              <h3 style={h3Style}>11. Governing Law</h3>
               <p>
                 These Terms are governed by the laws of India. Any disputes will be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.
               </p>
 
-              <h3 style={h3Style}>28. Changes to Terms</h3>
+              <h3 style={h3Style}>12. Changes to Terms</h3>
               <p>
-                We may update these Terms from time to time. We will post the new Terms on this page and update the &quot;Last Updated&quot; date. Continued use of the App after changes means you accept the new Terms.
+                We may update these Terms from time to time. We will post the new Terms on this page and update the &quot;Last Updated&quot; date. Continued use of the Service after changes means you accept the new Terms.
               </p>
 
-              <h3 style={h3Style}>29. Contact Us</h3>
+              <h3 style={h3Style}>13. Contact Us</h3>
               <p>
-                For any questions about these Terms, please contact us:
+                For any questions about these Terms, please contact:
               </p>
               <p style={contactBoxStyle}>
                 <strong>Gore Enterprises</strong><br />
