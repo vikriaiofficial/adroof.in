@@ -139,12 +139,7 @@ export default function TermsAndConditions() {
                 Address: House No 4, Kumbhar Wasti, Ravalgaon, Ravalgaon-Guravpimpri Rd, Mirajgaon, Ahmednagar, Maharashtra - 414401<br />
                 Phone: +91 73502 72829
               </p>
-            </div>
-          </div>
 
-          {/* ===== SECTION 2: META TERMS OF SERVICE ===== */}
-          <div style={sectionCard}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
               <h3 style={h3Style}>1. Agreement to Terms</h3>
               <p>
@@ -241,12 +236,7 @@ export default function TermsAndConditions() {
                 Address: House No 4, Kumbhar Wasti, Ravalgaon-Guravpimpri Rd, Mirajgaon, Ahmednagar, Maharashtra, India - 414401<br />
                 Phone: +91 73502 72829
               </p>
-            </div>
-          </div>
 
-          {/* ===== SECTION 3: GOOGLE TERMS & CONDITIONS ===== */}
-          <div style={sectionCard}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
               <h3 style={h3Style}>1. Acceptance of Terms</h3>
               <p>
