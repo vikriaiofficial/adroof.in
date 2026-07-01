@@ -170,9 +170,9 @@ export default function PrivacyPolicy() {
 
           {activeTab === 'meta' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={{ color: '#0f172a', fontSize: '1.5rem', fontWeight: '700' }}>Privacy Policy for Adroof</h2>
+              <h2 style={{ color: '#0f172a', fontSize: '1.5rem', fontWeight: '700' }}>Privacy Policy for Adroof — Meta Platform Data</h2>
               <p>
-                Gore Enterprises (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the Adroof application. This Privacy Policy explains how we collect, use, and share information when you use Adroof.
+                Gore Enterprises (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the Adroof application. This Privacy Policy explains how we collect, use, and share information when you use Adroof, particularly information received from Meta (Facebook &amp; Instagram) APIs.
               </p>
 
               <hr style={{ border: '0', borderTop: '1px solid rgba(15, 23, 42, 0.08)' }} />
@@ -188,6 +188,17 @@ export default function PrivacyPolicy() {
                 <li>Page and Post Insights, including metrics like reach, impressions, likes, and comments.</li>
                 <li>Ad Account information, including campaign data, spend, and performance metrics.</li>
               </ul>
+
+              <p style={{
+                background: 'rgba(59, 130, 246, 0.04)',
+                borderLeft: '4px solid #3b82f6',
+                padding: '12px 16px',
+                borderRadius: '0 8px 8px 0',
+                fontWeight: '500',
+                color: '#0f172a'
+              }}>
+                <strong>Facebook &amp; Instagram Data:</strong> When you log in with Facebook, we collect your name, email, profile picture, and access tokens for Facebook Pages and Instagram Business Accounts you administer. We also collect Page Insights and Ad performance data to display analytics in your dashboard.
+              </p>
 
               <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>2. How We Use Your Information</h3>
               <p>
@@ -207,7 +218,7 @@ export default function PrivacyPolicy() {
                 We do not sell your data. We only share your information with the following third parties to operate our service:
               </p>
               <ul style={{ paddingLeft: '20px', listStyleType: 'disc', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <li><strong>Meta Platforms, Inc.:</strong> To interact with the Facebook Graph API and Instagram Graph API on your behalf.</li>
+                <li><strong>Meta Platforms, Inc.:</strong> We share data with Meta&apos;s APIs to post content and fetch insights on your behalf. We do not sell this data.</li>
                 <li><strong>Amazon Web Services (AWS):</strong> Our cloud hosting provider, to securely store your data on servers located in Mumbai, India.</li>
               </ul>
 
@@ -226,12 +237,52 @@ export default function PrivacyPolicy() {
                 </a>
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>5. Facebook Platform Data Use</h3>
+              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>5. Facebook Data We Collect and Use</h3>
               <p>
-                Adroof&apos;s use and transfer of information received from Meta APIs will adhere to the Meta Platform Terms and Developer Policies, including the Data Use Restrictions. We will not use this data for any purpose other than providing the Adroof service to you.
+                When you use &quot;Login with Facebook&quot; to connect your account to Adroof, we collect and use the following information from Meta:
+              </p>
+              <ul style={{ paddingLeft: '20px', listStyleType: 'disc', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <li>Your Facebook profile information: name, email address, profile picture.</li>
+                <li>List of Facebook Pages and Instagram Business Accounts that you manage.</li>
+                <li>Page Access Tokens and Instagram Access Tokens to publish content and reply to comments on your behalf.</li>
+                <li>Page and Post Insights: reach, impressions, engagement, and follower metrics.</li>
+                <li>Advertising Data: Ad Account ID, campaign performance, spend, and results via the Marketing API.</li>
+              </ul>
+              <p>
+                We use this data solely to provide Adroof&apos;s core features: scheduling posts, publishing content, and showing analytics. We do not use it for advertising.
               </p>
 
-              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>6. Contact Us</h3>
+              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>6. Facebook Platform Data Use Compliance</h3>
+              <p>
+                Adroof&apos;s use and transfer to any other app of information received from Meta APIs will adhere to Meta Platform Terms, including Data Use Restrictions.
+              </p>
+              <p style={{
+                background: 'rgba(22, 163, 74, 0.04)',
+                borderLeft: '4px solid #16a34a',
+                padding: '12px 16px',
+                borderRadius: '0 8px 8px 0',
+                fontWeight: '500',
+                color: '#0f172a'
+              }}>
+                ✅ We agree that we will:
+              </p>
+              <ol style={{ paddingLeft: '20px', listStyleType: 'decimal', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <li>Not sell, license, or purchase any data obtained from Meta.</li>
+                <li>Not transfer Page or User data to any ad network, data broker, or other advertising service.</li>
+                <li>Only use the data to provide and improve Adroof&apos;s features for you.</li>
+              </ol>
+
+              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>7. Data Deletion Instructions</h3>
+              <p>
+                You can request deletion of your data by emailing <a href="mailto:info@adroof.in" style={{ color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' }}>info@adroof.in</a> with the subject &quot;Delete My Data&quot;. You can also disconnect your Facebook account from Adroof Settings. Upon request, all your data including access tokens will be permanently deleted within 7 business days.
+              </p>
+              <p>For data deletion, you can either:</p>
+              <ol style={{ paddingLeft: '20px', listStyleType: 'decimal', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <li>Go to <strong>Adroof Settings → Disconnect Facebook Account</strong>, or</li>
+                <li>Email us at <a href="mailto:info@adroof.in" style={{ color: 'var(--brand-orange)', textDecoration: 'none', fontWeight: '500' }}>info@adroof.in</a>. We will delete all your Meta data within 7 business days.</li>
+              </ol>
+
+              <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: '600' }}>8. Contact Us</h3>
               <p>
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
