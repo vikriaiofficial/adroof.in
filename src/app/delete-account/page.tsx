@@ -55,6 +55,7 @@ export default function DeleteAccount() {
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', textAlign: 'center', maxWidth: '560px' }}>
             You can request permanent deletion of your Adroof account and all associated data from Meta, Google, and our servers at any time.
           </p>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Last Updated: July 1, 2026</p>
         </div>
 
         {/* Content Card */}

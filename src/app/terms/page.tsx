@@ -145,10 +145,6 @@ export default function TermsAndConditions() {
           {/* ===== SECTION 2: META TERMS OF SERVICE ===== */}
           <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={h2Style}>Terms of Service for Meta</h2>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Last Updated: July 1, 2026</p>
-
-              <hr style={hrStyle} />
 
               <h3 style={h3Style}>1. Agreement to Terms</h3>
               <p>
@@ -251,10 +247,6 @@ export default function TermsAndConditions() {
           {/* ===== SECTION 3: GOOGLE TERMS & CONDITIONS ===== */}
           <div style={sectionCard}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h2 style={h2Style}>Terms &amp; Conditions for Google Services</h2>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Last Updated: July 1, 2026</p>
-
-              <hr style={hrStyle} />
 
               <h3 style={h3Style}>1. Acceptance of Terms</h3>
               <p>
@@ -325,7 +317,7 @@ export default function TermsAndConditions() {
                 <strong>a. By You:</strong> You may delete your account at any time via the in-app settings or by emailing <a href="mailto:info@adroof.in" style={linkStyle}>info@adroof.in</a>.
               </p>
               <p>
-                <strong>b. By Us:</strong> We may suspend or terminate your access if you violate these Terms or Google&apos;s policies. We will provide notice when possible.
+                <strong>b. By Us:</strong> We may suspend or terminate your access if you violate these Terms or Google&apos;s policies. We will provide notice when possible. Upon account deletion, all your data will be permanently removed within 7 business days.
               </p>
 
               <h3 style={h3Style}>8. Disclaimers and Limitation of Liability</h3>
